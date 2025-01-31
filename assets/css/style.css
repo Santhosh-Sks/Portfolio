@@ -362,7 +362,7 @@ h3{
     flex-direction: column;
     width: 43%;
     padding:40px;
-    height: 350px;
+    height: 450px;
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
