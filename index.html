@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <title>Portfolio</title>
+    <title>Santhosh - Software Developer</title>
 </head>
 <body>
    <div class="container">
       <nav id="header">
         <div class="nav-logo">
-            <p class="nav-name">My portfolio</p>
+            <p class="nav-name">Santhosh.dev</p>
         </div>
         <div class="nav-menu" id="myNavMenu">
             <ul class="nav_menu_list">
@@ -25,15 +26,19 @@
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#about" class="nav-link">Skills</a>
+                    <a href="#skills" class="nav-link">Skills</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#project" class="nav-link">Education</a>
+                    <a href="#education" class="nav-link">Education</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
                     <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#certificates" class="nav-link">Certificates</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
@@ -53,19 +58,21 @@
        <section class="featured-box" id="home">
           <div class="featured-text">
             <div class="featured-text-card">
-                <span>Santhosh</span>
+                <span>Welcome to my portfolio</span>
             </div>
             <div class="featured-name">
-                <p>I'm Santhosh</p>
+                <p>Hi, I'm <span class="highlight">Santhosh</span></p>
             </div>
             <div class="featured-text-info">
-                <p><h2>Software Developer</h2>
-                     Bachelor of Computer Science graduate, currently pursuing MCA at Kongu Engineering College, Erode. Passionate about data structures, algorithms, and database technologies, 
+                <p><h2 class="typing-text">Software Developer</h2>
+                     Bachelor of Computer Science graduate, currently pursuing MCA at Kongu Engineering College, Erode. 
+                     Passionate about data structures, algorithms, and database technologies, 
                     with a keen focus on crafting innovative, efficient solutions that scale seamlessly.
                 </p>
             </div>
             <div class="featured-text-btn">
-                <a href="assets/src/Resume.pdf"><button class="btn blue-btn">Resume <i class="uil uil-file-alt"></i></button></a>
+                <a href="assets/src/Resume.pdf"><button class="btn blue-btn">Download Resume <i class="uil uil-file-alt"></i></button></a>
+                <a href="#projects"><button class="btn outline-btn">View Projects <i class="uil uil-arrow-right"></i></button></a>
             </div>
             <div class="social_icons">
                 <div class="icon"><a href="https://www.instagram.com/_im._santhosh_?igsh=MWxtMmI4amN3dXQxdA=="><i class="uil uil-instagram"></i></a></div>
@@ -76,7 +83,13 @@
           </div>
           <div class="featured-image">
             <div class="image">
-                <img src="assets/images/profile-resume.jpg" alt="avatar">
+                <img src="assets/images/profile-resume.jpg" alt="Santhosh">
+                <div class="floating-card">
+                    <div class="card-icon">
+                        <i class="uil uil-code-branch"></i>
+                    </div>
+                    
+                </div>
             </div>
           </div>
           <div class="scroll-icon-box">
@@ -89,224 +102,389 @@
        <section class="section" id="about">
           <div class="top-header">
             <h1>About Me</h1>
+            <span>Get to know me better</span>
           </div>
           <div class="row">
             <div class="col">
                 <div class="about-info">
-                    <h3>My introduction</h3><br><br><Br>
+                    <h3>My Introduction</h3>
                     <p>I'm Santhosh, a Bachelor of Computer Applications graduate and currently pursuing a Master of Computer Applications.
-                         I am a designer and front-end developer from Tamil Nadu, India, with a strong focus on application development and data structures & algorithms.
+                         I am a designer and full-stack developer from Tamil Nadu, India, with a strong focus on application development and data structures & algorithms.
                           My expertise lies in developing efficient, scalable, and optimized solutions for complex problems, ensuring high performance and reliability in software applications.
                         I am committed to continuous learning and innovation in the field of technology.
                     </p>
+                    
                     <div class="about-btn">
                         <a href="assets/src/Resume.pdf"><button class="btn">Download CV <i class="uil uil-import"></i></button></a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="about-info">
-                    <h3>Skills</h3><br>
+                <div class="about-info" id="skills">
+                    <h3>Technical Skills</h3>
                 <div class="skills-box">
                     <div class="skills-header">
-                        <h3>Languages</h3>
+                        <h3><i class="uil uil-code-branch"></i> Programming Languages</h3>
                     </div>
                     <div class="skills-list">
-                        <span>C</span>
-                        <span>JAVA</span>
-                        <span>Python</span>
-                        <span>Html and JavaScript</span>
-                        <span>C++</span>
-                        
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">HTML/CSS</span>
                     </div>
                 </div>
                 <div class="skills-box">
                     <div class="skills-header">
-                        <h3>Frameworks & Libraries</h3>
+                        <h3><i class="uil uil-react"></i> Frameworks & Libraries</h3>
                     </div>
                     <div class="skills-list">
-                        <span>Node js</span>
-                        <span>React js</span>
-                        <span>Spring </span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Express.js</span>
                     </div>
                 </div>
                 <div class="skills-box">
                     <div class="skills-header">
-                        <h3>Databases</h3>
+                        <h3><i class="uil uil-database"></i> Databases</h3>
                     </div>
                     <div class="skills-list">
-                        <span>MySQL</span>
-                        <span>MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
                     </div>
                 </div>
                 <div class="skills-box">
                     <div class="skills-header">
-                        <h3>Tools and Technologies</h3>
+                        <h3><i class="uil uil-tools"></i> Tools & Technologies</h3>
                     </div>
                     <div class="skills-list">
-                        <span>Git</span>
-                        <span>Github</span>
-                        <span>Postman</span>
-                        <span>Vs code</span>
-                        <span>Intellij Idea</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">IntelliJ IDEA</span>
                     </div>
                 </div>
             </div>
             </div>
           </div>
        </section>
-       <section class="section" id="project">
+       <section class="section" id="education">
           <div class="top-header">
-              <h1>Education</h1>
+              <h1>Education Journey</h1>
+              <span>My academic background</span>
           </div>
-          <div class="project-container">
-            <div class="project-box">
-                <i class="uil uil-book-alt"></i>
-                <h3>S R G D S Matric Higher Secondary School</h3>  
-            <label>  
-                I pursued my Higher Secondary Certificate (HSC) at S R G D S Matric Higher Secondary School, located in Thiruvannamalai.  
-                I successfully completed my studies with an impressive score of 82%, demonstrating strong learning skills and academic excellence.  
-            </label>
-
+          <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="uil uil-award"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Master of Computer Applications (MCA)</h3>
+                    <h4>Kongu Engineering College, Perundurai, Erode</h4>
+                    <p class="timeline-date">2024 - Present</p>
+                    <p>Currently pursuing my Master of Computer Applications, enhancing my technical expertise and skills in advanced computer science concepts.</p>
+                </div>
             </div>
-            <div class="project-box">
-                <i class="uil-graduation-cap"></i>
-               <h3>Karan Arts & Science College</h3>  
-            <label>  
-                I pursued my Bachelor of Computer Science degree at Karan Arts & Science College, located in Thenmathur, Thiruvannamalai.  
-                I successfully graduated with a CGPA of 7.2 during the academic years 2021 - 2024.  
-            </label>
-
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="uil uil-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Computer Science</h3>
+                    <h4>Karan Arts & Science College, Thenmathur, Thiruvannamalai</h4>
+                    <p class="timeline-date">2021 - 2024</p>
+                    <p>Successfully graduated with a CGPA of 7.2, gaining strong foundation in computer science fundamentals.</p>
+                </div>
             </div>
-            <div class="project-box">
-                <i class="uil uil-award"></i>
-                <h3>Kongu Engineering College</h3>  
-            <label>  
-                I am currently pursuing my Master of Computer Applications (MCA) at Kongu Engineering College, located in Perundurai, Erode.  
-                My academic journey began in 2024 and is ongoing as I continue to enhance my technical expertise and skills.  
-            </label>
-
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="uil uil-book-alt"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <h4>S R G D S Matric Higher Secondary School, Thiruvannamalai</h4>
+                    <p class="timeline-date">2019 - 2021</p>
+                    <p>Completed with an impressive score of 82%, demonstrating strong learning skills and academic excellence.</p>
+                </div>
             </div>
           </div>
        </section>
        <section class="section" id="projects">
         <div class="top-header">
-            <h1>Projects</h1>
+            <h1>Featured Projects</h1>
+            <span>Some of my recent work</span>
         </div>
+        
         <div class="project-container">
-            
-          <div class="project-box">
-            <i class="uil uil-home"></i>
-            <h3>Home Rent</h3>
-            <label>Nestcove is a modern web app for renting, buying, and selling houses. It features a user-friendly interface, advanced search filters, and detailed property pages.
-                Users can list their homes through the "Become a Host" feature and securely sign up or log in for personalized services. <br>
-                 <h4>Tech stack : </h4> React js, Node js and MongoDB <br>
-                 
-                 <h4>Source Link : <a href="https://github.com/Santhosh-Sks/Nestcove">Source</h4></a> 
-                 <h4>Live Link : <a href="https://nestcove.vercel.app/">Live</h4></a></label>
-        </div>
-          <div class="project-box">
-              <i class="uil uil-archive"></i>
-              <h3>College voting system</h3>
-              <label>The College Voting System is a web-based platform designed to facilitate secure and transparent voting processes within a college environment. 
-                  This system automates manual voting procedures.
-                  It provides features like candidate registration, voter authentication,real-time vote<br>
-                <h4>Tech stack : </h4> Html, css, javascript,php, Mysql<br>
-                <h4>Source Link : <a href="https://github.com/Santhosh-Sks/college-voting-system">Source</h4></a></label>
-          </div>
+            <div class="project-box featured">
+                <div class="project-image">
+                    <i class="uil uil-clipboard"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Project Management System</h3>
+                    <p>A full-stack web application for efficient team collaboration and project handling with advanced features.</p>
+                    <div class="project-features">
+                        <span>JWT Authentication</span>
+                        <span>Task Management</span>
+                        <span>Real-time Updates</span>
+                        <span>Email Integration</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>React.js</span>
+                        <span>Spring Boot</span>
+                        <span>MongoDB</span>
+                        <span>Redux</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Santhosh-Sks/Project-Management-System" class="btn-link"><i class="uil uil-github"></i> Code</a>
+                        <a href="https://projectstack-sks.vercel.app/" class="btn-link"><i class="uil uil-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
 
-          <div class="project-box">
-            <i class="uil uil-shopping-cart-alt"></i>
-            <h3>E-Commerce</h3>
-            <label>This is a Shoe-Store eCommerce website template using HTML and CSS and JS.
-                In this e-commerce website template design I created some featured products with product price, image and rating.
-                I also made all products page, single product page, shopping cart page<br>
-                <h4>Tech stack : </h4> Html, css and javascript <br>
-                <h4>Source Link : <a href="https://github.com/Santhosh-Sks/E-commerce">Source </h4></a>
-                <h4>Live Link : <a href="https://santhosh-sks.github.io/E-commerce/">Live</h4></a></label>
-        </div>
-        <div class="project-box">
-            <i class="uil uil-archive"></i>
-            <h3>To Do List</h3>
-            <label>A To-Do List web app helps users organize tasks efficiently by allowing them to add, edit, and delete items. 
-                It provides a clean and responsive interface for managing daily activities. 
-                The app is simple, lightweight, and enhances productivity.<br>
-              <h4>Tech stack : </h4> Html, css and js<br>
-              <h4>Source Link :<a href="https://github.com/Santhosh-Sks/To-Do-List">Source</h4></a>
-              <h4>Live Link : <a href="https://santhosh-sks.github.io/To-Do-List/">Live</h4></a></label>
-        </div>
+            <div class="project-box">
+                <div class="project-image">
+                    <i class="uil uil-home"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Real Estate Platform</h3>
+                    <p>A modern web app for renting, buying, and selling houses with advanced search filters and user-friendly interface.</p>
+                    <div class="project-features">
+                        <span>Property Listings</span>
+                        <span>Search & Filter</span>
+                        <span>User Authentication</span>
+                        <span>Image Upload</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>React.js</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Santhosh-Sks/Nestcove" class="btn-link"><i class="uil uil-github"></i> Code</a>
+                        <a href="https://nestcove.vercel.app/" class="btn-link"><i class="uil uil-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-image">
+                    <i class="uil uil-search-alt"></i>
+                </div>
+                <div class="project-content">
+                    <h3>AI Research Paper</h3>
+                    <p>A comprehensive analysis comparing AI models: Gemini AI, DeepSeek AI, and Qwen AI through OpenRouter API integration.</p>
+                    <div class="project-features">
+                        <span>30+ Programming Challenges</span>
+                        <span>Performance Analysis</span>
+                        <span>Real-time API Testing</span>
+                        <span>Research Insights</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>OpenRouter API</span>
+                        <span>Data Analysis</span>
+                        <span>Research</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-image">
+                    <i class="uil uil-vote-yea"></i>
+                </div>
+                <div class="project-content">
+                    <h3>College Voting System</h3>
+                    <p>A secure web-based platform for transparent voting processes within college environments with real-time results.</p>
+                    <div class="project-features">
+                        <span>Secure Authentication</span>
+                        <span>Real-time Results</span>
+                        <span>Candidate Management</span>
+                        <span>Vote Tracking</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Santhosh-Sks/college-voting-system" class="btn-link"><i class="uil uil-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-image">
+                    <i class="uil uil-shopping-cart-alt"></i>
+                </div>
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A complete shoe store eCommerce website with product management, shopping cart, and payment integration.</p>
+                    <div class="project-features">
+                        <span>Product Catalog</span>
+                        <span>Shopping Cart</span>
+                        <span>User Reviews</span>
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Local Storage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Santhosh-Sks/E-commerce" class="btn-link"><i class="uil uil-github"></i> Code</a>
+                        <a href="https://santhosh-sks.github.io/E-commerce/" class="btn-link"><i class="uil uil-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <div class="project-image">
+                    <i class="uil uil-check-circle"></i>
+                </div>
+                <div class="project-content">
+                    <h3>To-Do List App</h3>
+                    <p>A clean and responsive task management application for organizing daily activities and enhancing productivity.</p>
+                    <div class="project-features">
+                        <span>Add/Edit Tasks</span>
+                        <span>Task Categories</span>
+                        <span>Local Storage</span>
+                        <span>Responsive UI</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>DOM Manipulation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Santhosh-Sks/To-Do-List" class="btn-link"><i class="uil uil-github"></i> Code</a>
+                        <a href="https://santhosh-sks.github.io/To-Do-List/" class="btn-link"><i class="uil uil-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+            </div>
         </div>
      </section>
-       <section class="section" id="projects">
+       <section class="section" id="certificates">
         <div class="top-header">
-            <h1>Certificates</h1>
+            <h1>Certifications</h1>
+            <span>My professional achievements</span>
         </div>
-        <div class="project-container">
-          <div class="project-box">
-              <i class="uil uil-award"></i>
-              <h3>Udemy - Java</h3>
-              <label><Center>Successfully completed an in-depth Java course on Udemy, gaining extensive knowledge in Java programming.  
-                Enhanced my skills in building efficient, scalable applications by mastering core concepts,
-                  object-oriented programming, and advanced Java features.<a href="assets/src/java.pdf"><h4>View</h4></a></center></label>
+        <div class="certificates-container">
+          <div class="certificate-box">
+              <div class="certificate-icon">
+                  <i class="uil uil-award"></i>
+              </div>
+              <div class="certificate-content">
+                  <h3>MongoDB Associate Developer</h3>
+                  <p>Official MongoDB certification covering schema design, CRUD operations, aggregation, indexing, and performance tuning.</p>
+                  <a href="assets/src/MongoDBAssociateDeveloper_Badge.pdf" class="certificate-link">View Certificate <i class="uil uil-external-link-alt"></i></a>
+              </div>
           </div>
-          <div class="project-box">
-              <i class="uil uil-award"></i>
-              <h3>Csc - Advance diploma in <br>Python programming</h3>
-              <label><Center>Completed an Advanced Diploma in Python Programming, mastering both core and advanced Python concepts.  
-                Gained expertise in data structures, algorithms, object-oriented programming.<br>
-                <a href="assets/src/adpp.pdf"><h4>View</h4></a></center></label>
+          <div class="certificate-box">
+              <div class="certificate-icon">
+                  <i class="uil uil-award"></i>
+              </div>
+              <div class="certificate-content">
+                  <h3>Scalar - DSA with Java</h3>
+                  <p>Certificate of Excellence for mastering fundamental and advanced data structures and algorithms in Java.</p>
+                  <a href="assets/src/DSA-JAVA.pdf" class="certificate-link">View Certificate <i class="uil uil-external-link-alt"></i></a>
+              </div>
           </div>
-          <div class="project-box">
-              <i class="uil uil-award"></i>
-              <h3>Microtech - php and javascript</h3>
-              <label><Center>completed a JavaScript course at Microtech Institute, gaining proficiency in JavaScript concepts  
-    and dynamic web development. Strengthened my skills in front-end scripting, DOM manipulation, and interactive web applications.<br>
-                <a href="assets/src/php.pdf"><h4>View</h4></a></center></label>
+          <div class="certificate-box">
+              <div class="certificate-icon">
+                  <i class="uil uil-award"></i>
+              </div>
+              <div class="certificate-content">
+                  <h3>Udemy - Java Programming</h3>
+                  <p>Comprehensive Java course covering core concepts, object-oriented programming, and advanced Java features.</p>
+                  <a href="assets/src/java.pdf" class="certificate-link">View Certificate <i class="uil uil-external-link-alt"></i></a>
+              </div>
           </div>
-          <div class="project-box">
-            <i class="uil uil-award"></i>
-            <h3>Udemy - Rest API with Node js</h3>
-            <label><Center>Completed a course in Backend REST API development with Node.js,
-                 Gained hands-on experience in server-side programming and API integration<br>
-               <a href="assets/src/Nodejs.pdf"><h4>View</h4></a></center></label>
-        </div>
-        <div class="project-box">
-            <i class="uil uil-award"></i>
-            <h3>Lets Upgrade - React js</h3>
-            <label><Center>Successfully completed a course in Backend REST API development with Node.js.  
-    Gained hands-on experience in server-side programming, API integration, and building scalable backend applications.  
-    Strengthened my understanding of Express.js, middleware, authentication, and database interactions<br>
-               <a href="assets/src/ReactBoot.pdf"><h4>View</h4></a></center></label>
-        </div>
-             <div class="project-box">
-            <i class="uil uil-award"></i>
-            <h3>Scalar - Dsa with java </h3>
-            <label><Center>Completed the Java DSA Course - Master the Fundamentals and Beyond from Scaler Topics, earning a Certificate of Excellence for mastering fundamental and advanced data structures and algorithms.<br>
-               <a href="assets/src/DSA-JAVA.pdf"><h4>View</h4></a></center></label>
-        </div>
+          <div class="certificate-box">
+              <div class="certificate-icon">
+                  <i class="uil uil-award"></i>
+              </div>
+              <div class="certificate-content">
+                  <h3>Udemy - REST API with Node.js</h3>
+                  <p>Backend development course covering server-side programming, API integration, and database interactions.</p>
+                  <a href="assets/src/Nodejs.pdf" class="certificate-link">View Certificate <i class="uil uil-external-link-alt"></i></a>
+              </div>
+          </div>
+          <div class="certificate-box">
+              <div class="certificate-icon">
+                  <i class="uil uil-award"></i>
+              </div>
+              <div class="certificate-content">
+                  <h3>Lets Upgrade - React.js</h3>
+                  <p>Frontend development course covering React.js fundamentals, component lifecycle, and modern React patterns.</p>
+                  <a href="assets/src/ReactBoot.pdf" class="certificate-link">View Certificate <i class="uil uil-external-link-alt"></i></a>
+              </div>
+          </div>
+          <div class="certificate-box">
+              <div class="certificate-icon">
+                  <i class="uil uil-award"></i>
+              </div>
+              <div class="certificate-content">
+                  <h3>Microtech - PHP & JavaScript</h3>
+                  <p>Web development course covering PHP backend development and JavaScript frontend scripting.</p>
+                  <a href="assets/src/php.pdf" class="certificate-link">View Certificate <i class="uil uil-external-link-alt"></i></a>
+              </div>
+          </div>
         </div>
      </section>
+   
+    
        <section class="section" id="contact">
           <div class="top-header">
-            <h1>Contact</h1>
-            <span>Contact me here</span>
+            <h1>Get In Touch</h1>
+            <span>Let's work together</span>
           </div>
           <div class="row">
              <div class="col">
                 <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: santikumr065@gmailcom</p>
-                    <p><i class="uil uil-phone"></i> Phone no: +91 9444681912</p>
+                    <h2><i class="uil uil-envelope"></i> Contact Information</h2>
+                    <div class="contact-item">
+                        <i class="uil uil-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>santikumr065@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="uil uil-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9444681912</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="uil uil-map-marker"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Tamil Nadu, India</p>
+                        </div>
+                    </div>
                 </div>
              </div>
              <div class="col">
                 <div class="contact-info">
-                    <h2>Follow On <i class="uil uil-corner-right-down"></i></h2>
+                    <h2><i class="uil uil-share-alt"></i> Follow Me</h2>
                     <div class="social_icons">
-                        <p class="icon"><a href="https://www.instagram.com/_im._santhosh_?igsh=MWxtMmI4amN3dXQxdA=="><i class="uil uil-instagram"></i></a></p>
-                        <p class="icon"><a href="https://www.linkedin.com/in/santhosh-s-034677300"><i class="uil uil-linkedin-alt"></i></a></p>
-                        <p class="icon"><a href="mailto://santikumr065@gmail.com"><i class="uil uil-fast-mail"></i></a></p>
-                        <p class="icon"><a href="https://github.com/Santhosh-Sks"><i class="uil uil-github-alt"></i></a></p>
+                        <div class="icon"><a href="https://www.instagram.com/_im._santhosh_?igsh=MWxtMmI4amN3dXQxdA=="><i class="uil uil-instagram"></i></a></div>
+                        <div class="icon"><a href="https://www.linkedin.com/in/santhosh-s-034677300"><i class="uil uil-linkedin-alt"></i></a></div>
+                        <div class="icon"><a href="mailto://santikumr065@gmail.com"><i class="uil uil-fast-mail"></i></a></div>
+                        <div class="icon"><a href="https://github.com/Santhosh-Sks"><i class="uil uil-github-alt"></i></a></div>
+                    </div>
+                    <div class="contact-cta">
+                        <p>Interested in working together? Let's discuss your project!</p>
+                        <a href="mailto:santikumr065@gmail.com" class="btn blue-btn">Send Message <i class="uil uil-message"></i></a>
                     </div>
                 </div>
              </div>
@@ -315,7 +493,7 @@
     </main>
     <footer>
         <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Santhosh</a> - All rights reserved</p>
+            <p>© 2024 <a href="#home" style="text-decoration: none; color: var(--first-color);">Santhosh</a> - All rights reserved | Crafted with ❤️</p>
         </div>
     </footer>
     </div>
