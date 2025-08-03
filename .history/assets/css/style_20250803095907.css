@@ -280,23 +280,6 @@ nav {
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--text-color);
-    background: none;
-    border: none;
-    padding: 0.5rem;
-    transition: var(--transition);
-}
-
-.nav-menu-btn:hover {
-    color: var(--first-color);
-}
-
-.nav-button {
-    margin-left: 2rem;
-}
-
-.nav-button .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
 }
 
 /* ===== HERO SECTION ===== */
@@ -679,14 +662,14 @@ nav {
 }
 
 .timeline-item:nth-child(even) {
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding-left: 6rem;
 }
 
 .timeline-icon {
     position: absolute;
     left: 50%;
-    margin-top: -30px;
+    top: 50%;
     width: 80px;
     height: 80px;
     background: var(--gradient-primary);
@@ -1242,9 +1225,6 @@ footer {
         box-shadow: 0 10px 30px var(--shadow-color);
         flex: none;
         justify-content: flex-start;
-        z-index: 999;
-        max-height: 80vh;
-        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -1263,7 +1243,6 @@ footer {
     
     .nav-button {
         margin-right: 0;
-        margin-left: 0;
     }
     
     .nav-button .btn {
@@ -1402,15 +1381,6 @@ footer {
     .nav-button .btn {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
-    }
-    
-    .nav-menu {
-        padding: 1.5rem;
-        max-height: 70vh;
-    }
-    
-    .nav_menu_list {
-        gap: 1rem;
     }
     
     .timeline-container {

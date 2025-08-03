@@ -1,91 +1,17 @@
 function myMenuFunction() {
     const menuBtn = document.getElementById("myNavMenu");
     const menuIcon = document.querySelector('.nav-menu-btn i');
-    const body = document.body;
     
     if (menuBtn.classList.contains("active")) {
         menuBtn.classList.remove("active");
         menuIcon.classList.remove("uil-times");
         menuIcon.classList.add("uil-bars");
-        body.style.overflow = 'auto'; // Re-enable scrolling
     } else {
         menuBtn.classList.add("active");
         menuIcon.classList.remove("uil-bars");
         menuIcon.classList.add("uil-times");
-        body.style.overflow = 'hidden'; // Prevent body scrolling
     }
 }
-
-// Consolidated navigation functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu button functionality
-    const menuBtn = document.querySelector('.nav-menu-btn');
-    if (menuBtn) {
-        menuBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            myMenuFunction();
-        });
-    }
-    
-    // Navigation links functionality
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.getElementById('header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if it's open
-                const menuBtn = document.getElementById("myNavMenu");
-                const menuIcon = document.querySelector('.nav-menu-btn i');
-                const body = document.body;
-                
-                if (menuBtn.classList.contains("active")) {
-                    menuBtn.classList.remove("active");
-                    menuIcon.classList.remove("uil-times");
-                    menuIcon.classList.add("uil-bars");
-                    body.style.overflow = 'auto';
-                }
-            }
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        const menuBtn = document.getElementById("myNavMenu");
-        const menuIcon = document.querySelector('.nav-menu-btn i');
-        const body = document.body;
-        
-        if (menuBtn && menuBtn.classList.contains("active")) {
-            if (!menuBtn.contains(e.target) && !e.target.closest('.nav-menu-btn')) {
-                menuBtn.classList.remove("active");
-                menuIcon.classList.remove("uil-times");
-                menuIcon.classList.add("uil-bars");
-                body.style.overflow = 'auto';
-            }
-        }
-    });
-    
-    // Remove the old event listeners that were causing conflicts
-    const oldAnchors = document.querySelectorAll('a[href^="#"]');
-    oldAnchors.forEach(anchor => {
-        // Remove any existing event listeners by cloning the element
-        const newAnchor = anchor.cloneNode(true);
-        anchor.parentNode.replaceChild(newAnchor, anchor);
-    });
-});
 
 window.onscroll = function() {
     headerShadow();
@@ -207,6 +133,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const headerHeight = document.getElementById('header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
     // Add loading animation for skill icons
     const skillIcons = document.querySelectorAll('.skill-icon img');
     
@@ -258,7 +206,27 @@ function scrollActive() {
     });
 }
 
-// Removed the conflicting smooth scrolling code that was causing issues
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            const menuBtn = document.getElementById("myNavMenu");
+            if (menuBtn.classList.contains("active")) {
+                myMenuFunction();
+            }
+        }
+    });
+});
 
 // Removed parallax effect for static profile image
 // window.addEventListener('scroll', () => {

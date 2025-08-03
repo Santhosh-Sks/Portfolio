@@ -16,9 +16,8 @@ function myMenuFunction() {
     }
 }
 
-// Consolidated navigation functionality
+// Add event listener for mobile menu button
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu button functionality
     const menuBtn = document.querySelector('.nav-menu-btn');
     if (menuBtn) {
         menuBtn.addEventListener('click', function(e) {
@@ -28,12 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Navigation links functionality
+    // Handle navigation links for both desktop and mobile
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            e.stopPropagation();
             
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     menuBtn.classList.remove("active");
                     menuIcon.classList.remove("uil-times");
                     menuIcon.classList.add("uil-bars");
-                    body.style.overflow = 'auto';
+                    body.style.overflow = 'auto'; // Re-enable scrolling
                 }
             }
         });
@@ -73,17 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 menuBtn.classList.remove("active");
                 menuIcon.classList.remove("uil-times");
                 menuIcon.classList.add("uil-bars");
-                body.style.overflow = 'auto';
+                body.style.overflow = 'auto'; // Re-enable scrolling
             }
         }
-    });
-    
-    // Remove the old event listeners that were causing conflicts
-    const oldAnchors = document.querySelectorAll('a[href^="#"]');
-    oldAnchors.forEach(anchor => {
-        // Remove any existing event listeners by cloning the element
-        const newAnchor = anchor.cloneNode(true);
-        anchor.parentNode.replaceChild(newAnchor, anchor);
     });
 });
 
@@ -258,7 +248,32 @@ function scrollActive() {
     });
 }
 
-// Removed the conflicting smooth scrolling code that was causing issues
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        // Don't scroll if clicking on the mobile menu button
+        if (this.closest('.nav-menu-btn')) {
+            return;
+        }
+        
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            const menuBtn = document.getElementById("myNavMenu");
+            if (menuBtn.classList.contains("active")) {
+                myMenuFunction();
+            }
+        }
+    });
+});
 
 // Removed parallax effect for static profile image
 // window.addEventListener('scroll', () => {

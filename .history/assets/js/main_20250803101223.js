@@ -258,7 +258,27 @@ function scrollActive() {
     });
 }
 
-// Removed the conflicting smooth scrolling code that was causing issues
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        // Don't scroll if clicking on the mobile menu button or nav links (already handled above)
+        if (this.closest('.nav-menu-btn') || this.classList.contains('nav-link')) {
+            return;
+        }
+        
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
 // Removed parallax effect for static profile image
 // window.addEventListener('scroll', () => {

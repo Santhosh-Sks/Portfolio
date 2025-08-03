@@ -1243,8 +1243,6 @@ footer {
         flex: none;
         justify-content: flex-start;
         z-index: 999;
-        max-height: 80vh;
-        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -1406,7 +1404,6 @@ footer {
     
     .nav-menu {
         padding: 1.5rem;
-        max-height: 70vh;
     }
     
     .nav_menu_list {

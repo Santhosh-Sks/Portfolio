@@ -1,91 +1,17 @@
 function myMenuFunction() {
     const menuBtn = document.getElementById("myNavMenu");
     const menuIcon = document.querySelector('.nav-menu-btn i');
-    const body = document.body;
     
     if (menuBtn.classList.contains("active")) {
         menuBtn.classList.remove("active");
         menuIcon.classList.remove("uil-times");
         menuIcon.classList.add("uil-bars");
-        body.style.overflow = 'auto'; // Re-enable scrolling
     } else {
         menuBtn.classList.add("active");
         menuIcon.classList.remove("uil-bars");
         menuIcon.classList.add("uil-times");
-        body.style.overflow = 'hidden'; // Prevent body scrolling
     }
 }
-
-// Consolidated navigation functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu button functionality
-    const menuBtn = document.querySelector('.nav-menu-btn');
-    if (menuBtn) {
-        menuBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            myMenuFunction();
-        });
-    }
-    
-    // Navigation links functionality
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.getElementById('header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if it's open
-                const menuBtn = document.getElementById("myNavMenu");
-                const menuIcon = document.querySelector('.nav-menu-btn i');
-                const body = document.body;
-                
-                if (menuBtn.classList.contains("active")) {
-                    menuBtn.classList.remove("active");
-                    menuIcon.classList.remove("uil-times");
-                    menuIcon.classList.add("uil-bars");
-                    body.style.overflow = 'auto';
-                }
-            }
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        const menuBtn = document.getElementById("myNavMenu");
-        const menuIcon = document.querySelector('.nav-menu-btn i');
-        const body = document.body;
-        
-        if (menuBtn && menuBtn.classList.contains("active")) {
-            if (!menuBtn.contains(e.target) && !e.target.closest('.nav-menu-btn')) {
-                menuBtn.classList.remove("active");
-                menuIcon.classList.remove("uil-times");
-                menuIcon.classList.add("uil-bars");
-                body.style.overflow = 'auto';
-            }
-        }
-    });
-    
-    // Remove the old event listeners that were causing conflicts
-    const oldAnchors = document.querySelectorAll('a[href^="#"]');
-    oldAnchors.forEach(anchor => {
-        // Remove any existing event listeners by cloning the element
-        const newAnchor = anchor.cloneNode(true);
-        anchor.parentNode.replaceChild(newAnchor, anchor);
-    });
-});
 
 window.onscroll = function() {
     headerShadow();
@@ -141,20 +67,6 @@ sr.reveal('.certificate-box', {
     distance: '50px'
 });
 
-// Enhanced animations for skill cards
-sr.reveal('.skills-category', { 
-    interval: 200,
-    delay: 100,
-    distance: '50px'
-});
-
-sr.reveal('.skill-card', { 
-    interval: 100,
-    delay: 200,
-    distance: '30px',
-    scale: 0.9
-});
-
 const srLeft = ScrollReveal({
     origin: 'left',
     distance: '80px',
@@ -175,69 +87,8 @@ const srRight = ScrollReveal({
     easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
 });
 
-srRight.reveal('.skills-grid', { delay: 100 });
+srRight.reveal('.skills-box', { delay: 100 });
 srRight.reveal('.timeline-item:nth-child(even)', { delay: 100 });
-
-// Skill card hover effects
-document.addEventListener('DOMContentLoaded', function() {
-    const skillCards = document.querySelectorAll('.skill-card');
-    
-    skillCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.05)';
-            this.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.2)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-            this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        });
-    });
-    
-    // Project image hover effects
-    const projectImages = document.querySelectorAll('.project-image img');
-    
-    projectImages.forEach(img => {
-        img.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1)';
-        });
-        
-        img.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1.05)';
-        });
-    });
-    
-    // Add loading animation for skill icons
-    const skillIcons = document.querySelectorAll('.skill-icon img');
-    
-    skillIcons.forEach(icon => {
-        icon.addEventListener('load', function() {
-            this.style.opacity = '0';
-            this.style.transform = 'scale(0.8)';
-            
-            setTimeout(() => {
-                this.style.transition = 'all 0.3s ease';
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            }, 100);
-        });
-    });
-    
-    // Enhanced button hover effects
-    const buttons = document.querySelectorAll('.btn, .btn-link');
-    
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px)';
-            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(-2px)';
-            this.style.boxShadow = '0 8px 25px -8px rgba(0, 0, 0, 0.15)';
-        });
-    });
-});
 
 const sections = document.querySelectorAll('section[id]');
 
@@ -249,27 +100,46 @@ function scrollActive() {
         const sectionTop = current.offsetTop;
         const sectionId = current.getAttribute('id');
         const navLink = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLink.classList.add('active-link');
+            navLink?.classList.add('active-link');
         } else {
-            navLink.classList.remove('active-link');
+            navLink?.classList.remove('active-link');
         }
     });
 }
 
-// Removed the conflicting smooth scrolling code that was causing issues
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        if (target) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            const menuBtn = document.getElementById("myNavMenu");
+            if (menuBtn.classList.contains("active")) {
+                myMenuFunction();
+            }
+        }
+    });
+});
 
-// Removed parallax effect for static profile image
-// window.addEventListener('scroll', () => {
-//     const scrolled = window.pageYOffset;
-//     const parallax = document.querySelector('.featured-image');
-//     
-//     if (parallax) {
-//         const speed = scrolled * 0.5;
-//         parallax.style.transform = `translateY(${speed}px)`;
-//     }
-// });
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.featured-image');
+    
+    if (parallax) {
+        const speed = scrolled * 0.5;
+        parallax.style.transform = `translateY(${speed}px)`;
+    }
+});
 
 const skillTags = document.querySelectorAll('.skill-tag');
 skillTags.forEach((tag, index) => {

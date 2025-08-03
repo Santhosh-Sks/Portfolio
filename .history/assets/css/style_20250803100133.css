@@ -1242,9 +1242,6 @@ footer {
         box-shadow: 0 10px 30px var(--shadow-color);
         flex: none;
         justify-content: flex-start;
-        z-index: 999;
-        max-height: 80vh;
-        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -1263,7 +1260,6 @@ footer {
     
     .nav-button {
         margin-right: 0;
-        margin-left: 0;
     }
     
     .nav-button .btn {
@@ -1402,15 +1398,6 @@ footer {
     .nav-button .btn {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
-    }
-    
-    .nav-menu {
-        padding: 1.5rem;
-        max-height: 70vh;
-    }
-    
-    .nav_menu_list {
-        gap: 1rem;
     }
     
     .timeline-container {

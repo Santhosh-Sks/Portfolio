@@ -280,23 +280,6 @@ nav {
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--text-color);
-    background: none;
-    border: none;
-    padding: 0.5rem;
-    transition: var(--transition);
-}
-
-.nav-menu-btn:hover {
-    color: var(--first-color);
-}
-
-.nav-button {
-    margin-left: 2rem;
-}
-
-.nav-button .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
 }
 
 /* ===== HERO SECTION ===== */
@@ -679,14 +662,14 @@ nav {
 }
 
 .timeline-item:nth-child(even) {
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding-left: 6rem;
 }
 
 .timeline-icon {
     position: absolute;
     left: 50%;
-    margin-top: -30px;
+    top: 50%;
     width: 80px;
     height: 80px;
     background: var(--gradient-primary);
@@ -720,6 +703,7 @@ nav {
     transition: var(--transition);
     max-width: 700px;
     width: 100%;
+    margin-left: 40rem;
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -794,42 +778,6 @@ nav {
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
-}
-
-.timeline-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.timeline-content ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-color-light);
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.timeline-content ul li:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-content ul li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--first-color);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.timeline-content ul li p {
-    margin: 0;
-    color: var(--text-color-light);
-    font-size: 1.1rem;
-    line-height: 1.6;
 }
 
 /* ===== PROJECTS SECTION ===== */
@@ -1242,9 +1190,6 @@ footer {
         box-shadow: 0 10px 30px var(--shadow-color);
         flex: none;
         justify-content: flex-start;
-        z-index: 999;
-        max-height: 80vh;
-        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -1263,7 +1208,6 @@ footer {
     
     .nav-button {
         margin-right: 0;
-        margin-left: 0;
     }
     
     .nav-button .btn {
@@ -1402,15 +1346,6 @@ footer {
     .nav-button .btn {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
-    }
-    
-    .nav-menu {
-        padding: 1.5rem;
-        max-height: 70vh;
-    }
-    
-    .nav_menu_list {
-        gap: 1rem;
     }
     
     .timeline-container {
